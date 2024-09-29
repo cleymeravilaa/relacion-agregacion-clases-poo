@@ -1,0 +1,17 @@
+@startuml Composicion
+
+class Casa {
+    - puerta: Puerta
+    + cambiarPuerta(Puerta puerta): void
+    + obtenerPuerta(): Puerta
+    + eliminarPuerta(): void
+}
+
+class Puerta {
+    - material: String
+    + getMaterial(): String
+}
+
+' Representación de la relación composición
+Casa *-- "1" Puerta: tiene >
+@enduml

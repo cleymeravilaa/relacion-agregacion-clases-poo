@@ -1,0 +1,18 @@
+@startuml Agregacion
+
+class Jugador {
+    - nombre
+    + getNombre()
+}
+
+class Equipo {
+    - jugadores: ArrayList<Jugador>
+    + agregarJugador(Jugador jugador): void
+    + buscarJugador(String nombre): Jugador
+    + eliminarJugador(Jugador jugador): void
+    + eliminarJugadores(): void 
+}
+
+' Representación de la relación de agregación
+Equipo o-- "0..*" Jugador: tiene >
+@enduml

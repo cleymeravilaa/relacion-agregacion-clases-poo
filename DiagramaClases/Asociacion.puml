@@ -1,0 +1,22 @@
+@startuml Asociacion
+
+class Evento {
+    - nombre: String
+    + getNombre(): String
+}
+
+class Persona {
+    - nombre: String
+    + getNombre(): String
+}
+
+class Matrimonio {
+    - persona: Persona
+    - evento: Evento
+    + mostrarInvitacion(): void
+}
+
+'Representación de la relación asociación
+Matrimonio --> Evento
+Matrimonio --> Persona
+@enduml
